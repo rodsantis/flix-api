@@ -4,7 +4,7 @@ from movies.models import Movie
 
 
 class Review(models.Model):
-    movie = models.ForeignKey(Movie, on_delete=models.PROTECT, related_name='review')
+    movie = models.ForeignKey(Movie, on_delete=models.PROTECT, related_name='reviews')
     stars = models.IntegerField(
         validators=[
             MinValueValidator(0, 'Rating must be form 0 to 5 stars'),
